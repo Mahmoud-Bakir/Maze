@@ -1,4 +1,7 @@
 window.onload=function(){
+    var increment=0
+    let  points= document.getElementsByTagName("p")[0]
+    console.log(points)
     let start_div = document.getElementById("start");
     console.log(start_div);
     start_div.addEventListener("click",reset);
@@ -20,16 +23,19 @@ window.onload=function(){
        for(i=0;i<5;i++)
        test[i].style.backgroundColor="#eeeeee"
        status.innerHTML="Let's GOO"
+      
            }
     function danger(){
        let i=0
        for(i=0;i<5;i++)
        test[i].style.backgroundColor="red"
        status.innerHTML="You Lost"
+       points.innerHTML=`points: ${increment-=10} `
            }
         function winner(){
             if (status.innerHTML!="You Lost"){
             status.innerHTML="You Won !"
+            points.innerHTML=`points: ${increment+=5} `
              }
     }
 
