@@ -23,6 +23,8 @@ window.onload=function(){
        for(i=0;i<5;i++)
        test[i].style.backgroundColor="#eeeeee"
        status.innerHTML="Let's GOO"
+       increment=0
+       points.innerHTML=`points: ${increment} `
       
            }
     function danger(){
@@ -31,7 +33,7 @@ window.onload=function(){
        test[i].style.backgroundColor="red"
        status.innerHTML="You Lost"
        points.innerHTML=`points: ${increment-=10} `
-           }
+    }
         function winner(){
             if (status.innerHTML!="You Lost"){
             status.innerHTML="You Won !"
